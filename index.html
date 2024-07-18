@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+<!--<script>
+    axios.get('https://pizza-api.projectcodex.net/api/pizzas')
+    .then(result => {
+
+        console.log(result.data);
+    })
+</script>-->
+<link rel="stylesheet" href="style.css">
+</head>
+<body x-data="pizzaCart">
+    
+<!--pizza cart-->
+<div class="container" >
+    <h1>Perfect Pizza</h1>
+    <h3>Pizza Orders</h3>
+    <div class="pizzas-section">
+        <div class="wrapper">
+            <div class="section">
+                <div class="">
+                    <h2>Cart
+                        <img src="cart.png" width="30" alt="">
+                    </h2>
+                </div>
+                <div class="f1">
+                    <button x-on:Click="showCart=true">
+                        <img src="cart.png" width="30" alt="">Show Cart
+                    </button>
+                    <strong x-show="totalQty() > 0"><span x-text="totalQty()"></span> pizzas in your cart.</strong>
+                </div>
+                <div class="cart-box">
+                    <div class="cart" x-show="showCart">
+                        <div>
+                            <button x-on:Click="showCart=false">
+                                <img src="cart.png" width="30" alt="">Close Cart
+                            </button>
+                          <!-- <strong x-show="totalQty() > 0"><span x-text="totalQty()"></span> pizzas in your cart.</strong>-->
+                        </div>
+                       
+                        <table>
+                            <tr x-show="smallpizzaQty > 0">
+                                <td>Small Pizza</td>
+                                <td>
+                                    <span x-text="smallpizzaQty"></span>
+                                    <button x-on:click="buysmallPizza()" x-show="smallpizzaQty > 0">+</button>
+                                    <button x-on:click="clearsmallPizza()" x-show="smallpizzaQty > 0">-</button>
+                                </td>
+                                <td>
+                                    R<span x-text="smallPizzaTotal"></span>
+                                </td>
+                            </tr>
+                            <tr x-show="mediumpizzaQty > 0">
+                                <td>Medium Pizza</td>
+                                <td>
+                                    <span x-text="mediumpizzaQty"></span>
+                                    <button x-on:click="buymediumPizza()" x-show="mediumpizzaQty > 0">+</button>
+                                    <button x-on:click="clearmediumPizza()" x-show="mediumpizzaQty > 0">-</button>
+                                </td>
+                                <td>
+                                    R<span x-text="mediumPizzaTotal"></span>
+                                </td>
+                            </tr>
+                            <tr x-show="largepizzaQty > 0">
+                                <td>Large Pizza</td>
+                                <td>
+                                    <span x-text="largepizzaQty"></span>
+                                    <button x-on:click="buylargePizza()" x-show="largepizzaQty > 0">+</button>
+                                    <button x-on:click="clearlargePizza()" x-show="largepizzaQty > 0">-</button>
+                                </td>
+                                <td>
+                                    R<span x-text="largePizzaTotal"></span>
+                                </td>
+                            </tr>
+                            <tr x-show="cartTotal() > 0">
+                                <td colspan="2">Total</td>
+                                <td>
+                                    R<span x-text="cartTotal()"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div x-show="payNow">
+                                        <div class="message" x-text="paymentMessage"></div>
+                                        <div>
+                                            <label for="">Payment amount</label>
+                                            <input class="input" type="number" placeholder="Payment amount" x-model="paymentAmount">
+                                            <button x-show="paymentAmount > 0" x-on:click="makePayment" class="btn">
+                                                <img src="cart.png" width="20" alt="">Pay Now
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button x-show="!payNow" x-on:click="payNow=true" class="btn">
+                                        <img src="cart.png" width="20" alt="">Pay
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+        
+
+            </div>
+        </div>
+    </div>
+
+    <h1>Pizzas</h1>
+    <template x-for="pizza in pizzas">
+        <div class="pizzas">
+            <img src="pizza.png" width="100" ->
+            <h5 x-text="pizza.flavour"></h5>
+         <!--   <span x-text="pizza.id"></span>-->
+            <span x-text="pizza.size"></span>@
+           R <span x-text="pizza.price"></span>
+            <div>
+                <button class="btn">Add to cart</button>
+            </div>
+        </div>
+
+    </template>
+    <script src="pizza.js" ></script>
+</body>
+</html>
