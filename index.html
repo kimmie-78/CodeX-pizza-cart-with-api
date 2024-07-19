@@ -42,9 +42,9 @@
                                 <td x-text="pizza.size"></td>
                                 <td x-text="pizza.price">57.88</td>
                                 <td>
-                                    <button x-on:click="addPizzaToCart(pizzaId)">+</button>
+                                    <button x-on:click="addPizzaToCart(pizza.id)">+</button>
                                    x <span x-text="pizza.qty"></span>
-                                   <button x-on:click="removePizzaFrom Cart(pizzaId)">-</button>
+                                   <button x-on:click="removePizzaFromCart(pizza.id)">-</button>
                                 </td>
                                 <td x-text="pizza.total"></td>
                             </tr>

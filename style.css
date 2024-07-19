@@ -1,155 +1,158 @@
 body {
     background-color: #F2F3AE;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.pizzas{
-    border:1px solid;
+
+.pizzas {
+    border: 1px solid;
     margin-bottom: 1rem;
-    padding:1em ;
+    padding: 1em;
     display: flex;
     align-items: center;
     gap: 10px;
-    background-color:#F2F3AE;
+    background-color: #F2F3AE;
 }
 
 .pizzas h5,
 .pizzas span {
     margin: 0;
 }
-.pizzas-section{
+
+.pizzas-section {
     display: grid;
-  justify-content: center;
-  align-content: center;
+    justify-content: center;
+    align-content: center;
 }
-.wrapper{
+
+.wrapper {
     width: 510px;
     padding: 20px 20px 40px;
     background: #fbf8ee;
     border-radius: 10px;
     flex-direction: column;
     box-shadow: 0 10px 25px #cbad31;
-  }
-  .section {
+}
+
+.section {
     display: grid;
     justify-content: center;
     align-content: center;
-  }
-  .inline-container {
+}
+
+.inline-container {
     display: flex;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
 }
+
 .counter {
     margin-left: 10px;
 }
+
 .pay-button {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
     color: #fff;
-    background-color: #4CAF50; 
+    background-color: #4CAF50;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
 }
+
 .pay-button:hover {
     background-color: #45a049;
 }
-.pizza{
-    
+
+.pizza {
     border: 1px solid #DB504A;
     padding: 1em;
     margin: 1em;
-    
-    margin-bottom: 0.5em; 
+    margin-bottom: 0.5em;
     border-radius: 1em;
-
-    
 }
+
 .medium_pizza {
     background-color: #FC9E4F;
-    flex:2;
+    flex: 2;
 }
-.large_pizza{
+
+.large_pizza {
     background-color: #FF521B;
     flex: 3;
 }
+
 .small_pizza {
-background-color: #E7BB41  ;
-flex:1;
+    background-color: #E7BB41;
+    flex: 1;
 }
+
 table {
-    width:100%; 
-    border-collapse: collapse; 
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
     background-color: #FFF5EE;
 }
 
-
 td {
-    padding: 10px; 
-    border: 0px solid #ccc;
-    width:30%
-}
-th{
-    padding:10px;
-    width:40%;
-
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 30%;
 }
 
-
+th {
+    padding: 10px;
+    width: 40%;
+}
 
 @media (min-width: 768px) {
-   body {
-    background-color: #FFD3DA;
-    }
- 
-@media (min-width: 968px) {
-   
     body {
- background-color: #EEF4ED;
+        background-color: #FFD3DA;
+    }
 }
-.pizzas{
-    display: flex;
-}
-}
-} 
 
-/*buttonS*/
+@media (min-width: 968px) {
+    body {
+        background-color: #EEF4ED;
+    }
+
+    .pizzas {
+        display: flex;
+    }
+}
+
+/*buttons*/
 button {
-    background-color: #F4BB44; 
+    background-color: #F4BB44;
     color: #ffffff;
-    border: none; 
-    border-radius: 5px; 
+    border: none;
+    border-radius: 5px;
     padding: 5px 10px;
     font-size: 16px;
-    cursor: pointer; 
+    cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-
 button:hover {
     background-color: #ff6347;
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
-
 button:active {
-    background-color: #e63946; 
+    background-color: #e63946;
     transform: scale(0.95);
 }
 
-
 button:disabled {
-    background-color: #cccccc; 
-    cursor: not-allowed; 
+    background-color: #cccccc;
+    cursor: not-allowed;
 }
 
-
 button.pay {
-    background-color:#C04000;
+    background-color: #C04000;
 }
 
 button.pay:hover {
-    background-color: #E97451; 
+    background-color: #E97451;
 }
