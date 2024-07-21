@@ -61,5 +61,5 @@ content-type: application/json
 
 {
 	"cart_code" : "kv4xr0kv44",
-	"amount" : 200
+	"amount" : 500
 }
