@@ -3,7 +3,11 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.pizzas-zerotwo{
+.message {
+    font-size: 28px;
+}
+
+.pizzas-zerotwo {
     border: 1px solid;
     margin-bottom: 1rem;
     padding: 1em;
@@ -14,7 +18,7 @@ body {
 }
 
 .pizzas-zerotwo h5,
-.pizzas-zerotwo{
+.pizzas-zerotwo {
     margin: 0;
 }
 
@@ -25,7 +29,7 @@ body {
 }
 
 .wrapper {
-    width: 510px;
+    width: 110%;
     padding: 20px 20px 40px;
     background: #fbf8ee;
     border-radius: 10px;
@@ -143,4 +147,7 @@ button.pay {
 button.pay:hover {
     background-color: #E97451;
 }
-[x-cloak] { display: none !important; }
+
+[x-cloak] {
+    display: none !important;
+}
