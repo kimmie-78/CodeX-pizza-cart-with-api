@@ -18,18 +18,22 @@
 <body x-data="pizzaCart">
     
 <!--pizza cart-->
-<div class="container" >
+<div class="container" x-cloak>
     <h1>Perfect Pizza</h1>
-    <h3>Pizza Orders</h3>
-    <div class="pizzas-section">
-        <div class="wrapper">
+    <div>
+        Username: <input type="text" x-model="username">
+        <button x-on:click="login" x-show="!cartId">Login</button>
+        <button x-on:click = "logout" x-show="username && cartId">Logout</button>
+    </div>
+    <div x-show="cartId && username">Cart code: <span x-text="cartId"></span></div>
+    <div class="message" x-text="message">message here</div>
+    <div class="pizzas-section" x-show="cartId && username" >
+        <div class="wrapper" >
             <div class="section">
-                <div class="">
+                <div class="" >
                     <h2>Cart
                         <img src="cart.png" width="30" alt="">
                     </h2>
-                    <div>Cart code: <span x-text="cartId"></span></div>
-                    <div class="message" x-text="message">message here</div>
                     <table>
                         <tr>
                             <th>Flavour</th>
@@ -73,9 +77,11 @@
         </div>
     </div>
 
+
+<div class="pizzas" x-show="username && cartId">
     <h1>Pizzas</h1>
     <template x-for="pizza in pizzas">
-        <div class="pizzas">
+        <div class="pizzas-zerotwo">
             <img src="pizza.png" width="100" ->
             <h5 x-text="pizza.flavour"></h5>
          <!--   <span x-text="pizza.id"></span>-->
@@ -87,6 +93,7 @@
         </div>
 
     </template>
+    /</div> 
     <script src="pizza.js" ></script>
 </body>
 </html>

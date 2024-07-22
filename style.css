@@ -3,7 +3,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.pizzas {
+.pizzas-zerotwo{
     border: 1px solid;
     margin-bottom: 1rem;
     padding: 1em;
@@ -13,8 +13,8 @@ body {
     background-color: #F2F3AE;
 }
 
-.pizzas h5,
-.pizzas span {
+.pizzas-zerotwo h5,
+.pizzas-zerotwo{
     margin: 0;
 }
 
@@ -73,20 +73,7 @@ body {
     border-radius: 1em;
 }
 
-.medium_pizza {
-    background-color: #FC9E4F;
-    flex: 2;
-}
 
-.large_pizza {
-    background-color: #FF521B;
-    flex: 3;
-}
-
-.small_pizza {
-    background-color: #E7BB41;
-    flex: 1;
-}
 
 table {
     width: 100%;
@@ -117,7 +104,7 @@ th {
         background-color: #EEF4ED;
     }
 
-    .pizzas {
+    .pizzas-zerotwo {
         display: flex;
     }
 }
@@ -156,3 +143,4 @@ button.pay {
 button.pay:hover {
     background-color: #E97451;
 }
+[x-cloak] { display: none !important; }
