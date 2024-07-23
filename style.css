@@ -205,6 +205,62 @@ button.pay:hover {
     list-style-type: none;
     padding-left: 0;
 }
+/* Style for the cartHistory table container */
+.cartHistory {
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Style for the table within cartHistory */
+.cartHistory table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style for table headers */
+.cartHistory th {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Style for table cells */
+.cartHistory td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+
+.cartHistory tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+.cartHistory tr:hover {
+    background-color: #f1f1f1;
+}
+.cartHistory table {
+    margin-bottom: 20px;
+}
+
+
+.cartHistory tr {
+    line-height: 1.5;
+}
+
+
+.cartHistory h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+}
 
 
 [x-cloak] {
