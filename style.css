@@ -14,7 +14,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    background-color: #F2F3AE;
+    background-color: #FFE5B4;
 }
 
 .pizzas-zerotwo h5,
@@ -27,6 +27,7 @@ body {
     justify-content: center;
     align-content: center;
 }
+
 
 .wrapper {
     width: 110%;
@@ -111,6 +112,9 @@ th {
     .pizzas-zerotwo {
         display: flex;
     }
+    .pizzas-1{
+        display: flex;
+    }
 }
 
 /*buttons*/
@@ -147,6 +151,61 @@ button.pay {
 button.pay:hover {
     background-color: #E97451;
 }
+.featured-pizzas {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+    padding: 20px; 
+    justify-content: center; 
+}
+
+.featured-pizza-card {
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    padding: 10px;
+    box-shadow: 0 10px 25px #cbad31; 
+    text-align: center;
+    max-width: 250px; 
+    background-color: #FFF5EE;
+}
+
+.featured-pizza-card img {
+    display: block;
+    margin: 0 auto 10px; 
+}
+
+.featured-pizza-card h5 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+.featured-pizza-card span {
+    display: block;
+    margin: 5px 0;
+}
+
+.featured-pizza-card .btn {
+  margin-top: 10px;
+    padding: 5px 10px; 
+}
+.order-history {
+    margin-top: 20px;
+}
+
+.order-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.order-card h3 {
+    margin: 0;
+}
+
+.order-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
 
 [x-cloak] {
     display: none !important;

@@ -63,23 +63,65 @@
                             </tr>
                             <tr>
                                 <td colspan="3">Pay Now</td>
-                                <td>
-                                    <input x-model="paymentAmount" type="text">
-
-                                </td>
+                                
+                                    <td>
+                                        <input x-model.number="paymentAmount" type="text" x-on:input="calculateChange">
+                                    </td>
+                                    
+                            
                                 <td><button x-on:click="payForCart()">Pay</button></td>
                             </tr>
+                            <tr>
+                                <td colspan="3">Change</td>
+                                <td colspan="2">R<span x-text="change"></span></td>
+                            </tr>
                         </table>
+                        
                     </div>
-
-
-
-
+                    
+                    
+                    
+                    
                 </div>
             </div>
         </div>
+<!-- Order History Section -->
+<div x-show="username && cartId" class="order-history">
+    <h2>Order History</h2>
+    <template x-for="order in orderHistory" :key="order.id">
+        <div class="order-card">
+            <h3>Order ID: <span x-text="order.id"></span></h3>
+            <p>Date: <span x-text="order.date"></span></p>
+            <p>Total: R<span x-text="order.total"></span></p>
+            <h4>Items:</h4>
+            <ul>
+                <template x-for="item in order.items">
+                    <li>
+                        <span x-text="item.flavour"></span> - 
+                        <span x-text="item.size"></span> x 
+                        <span x-text="item.qty"></span>
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </template>
+</div>
 
 
+        <div x-show="username && cartId">
+        <h2>Featured Pizzas</h2>
+        </div>
+        <div class="featured-pizzas" x-show="username && cartId">
+            <template x-for="pizza in featuredPizzas">
+                <div class="featured-pizza-card">
+                    <img src="pizza.png" width="100">
+                    <h5 x-text="pizza.flavour"></h5>
+                    <span x-text="pizza.size"></span> @ R <span x-text="pizza.price"></span>
+                    <button class="btn" x-on:click="addPizzaToCart(pizza.id)">Add to cart</button>
+                </div>
+            </template>
+        </div>
+        
         <div class="pizzas" x-show="username && cartId">
             <h1>Pizzas</h1>
             <template x-for="pizza in pizzas">
@@ -91,12 +133,14 @@
                     R <span x-text="pizza.price"></span>
                     <div>
                         <button class="btn" x-on:click="addPizzaToCart(pizza.id)">Add to cart</button>
+                        <button class="btn" x-on:click="setFeaturedPizza(pizza.id)">Set as Featured</button>
                     </div>
                 </div>
 
             </template>
-            /
+            
         </div>
+    </div>
         <script src="pizza.js"></script>
 </body>
 
