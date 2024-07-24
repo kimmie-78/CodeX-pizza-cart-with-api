@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body x-data="pizzaCart">
+ 
     <!--pizza cart-->
     <div class="container" x-cloak>
         <h1>Perfect Pizza</h1>
@@ -17,6 +18,7 @@
             <button x-on:click="login" x-show="!cartId">Login</button>
             <button x-on:click="logout" x-show="username && cartId">Logout</button>
         </div>
+        <!--cart-->
         <div x-show="cartId && username">Cart code: <span x-text="cartId"></span></div>
         <div class="pizzas-section" x-show="cartId && username && cartVisible">
             <div class="wrapper">
@@ -63,11 +65,13 @@
                 </div>
             </div>
         </div>
+        <!--history-->
         <button x-on:click="showHistoryEvent()" x-show="cartId && username">History</button>
         <div x-show="showHistory" x-show="cartId && username" class="pizza-options">
             <template x-for="cart in history">
                 <div class="cartHistory">
                     <h5 x-text="`Total: R${cart.total}`"></h5>
+                    <h5 x-text="`Status: ${cart.status}`"></h5>
                     <table>
                         <tr>
                             <th>Flavour</th>
@@ -75,6 +79,7 @@
                             <th>Price</th>
                             <th>Qty</th>
                             <th>Total</th>
+                           
                         </tr>
                         <template x-for="pizza in cart.pizzas">
                             <tr>
@@ -83,14 +88,17 @@
                                 <td x-text="pizza.price"></td>
                                 <td x-text="pizza.qty"></td>
                                 <td x-text="pizza.total"></td>
+                                
                             </tr>
                         </template>
                     </table>
                 </div>
             </template>
         </div>
+
+        <!--featured-->
         <div x-show="username && cartId">
-            <h2>Featured Pizzas</h2>
+            <h1>Featured Pizzas</h1>
         </div>
         <div class="featured-pizzas" x-show="username && cartId">
             <template x-for="pizza in featuredPizzas">

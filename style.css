@@ -1,14 +1,26 @@
 body {
-    background-color: #F2F3AE;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: url('hpizza.gif') no-repeat center center fixed;
+    background-size: cover; 
+    color: #000;
+    font-family:'Times New Roman', Times, serif; 
 }
 h1{
     text-align: center;
+    text-shadow:6px 5px #000;
+    font-size: 78px;
+    background: -webkit-linear-gradient(left, #ff7e5f, #feb47b); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background: linear-gradient(to right #feb47b #FF5F1F,#EC5800); 
+    background-clip: text;
+    color: transparent; 
 }
+
 /*cart*/
 .message {
     font-size: 18px;
-    text-shadow: 3px 2px #C04000;
+    color: #C04000 ;
+    
 }
 
 .pizzas-zerotwo {
@@ -62,7 +74,7 @@ h1{
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    color: #fff;
+    color: #C04000;
     background-color: #4CAF50;
     border: none;
     border-radius: 5px;
@@ -174,7 +186,7 @@ h2{
     padding: 10px;
     box-shadow: 0 10px 25px #cbad31; 
     text-align: center;
-    width: 250px;  /* Fixed width */
+    width: 250px; 
     background-color: #FFF5EE;
 }
 
@@ -216,7 +228,7 @@ h2{
     list-style-type: none;
     padding-left: 0;
 }
-/* Style for the cartHistory table container */
+
 .cartHistory {
     margin: 20px auto;
     padding: 10px;
@@ -226,13 +238,13 @@ h2{
     background-color: #fff;
 }
 
-/* Style for the table within cartHistory */
+
 .cartHistory table {
     width: 100%;
     border-collapse: collapse;
 }
 
-/* Style for table headers */
+
 .cartHistory th {
     background-color: #f4f4f4;
     color: #333;
@@ -241,7 +253,7 @@ h2{
     border-bottom: 2px solid #ddd;
 }
 
-/* Style for table cells */
+
 .cartHistory td {
     padding: 10px;
     border-bottom: 1px solid #ddd;

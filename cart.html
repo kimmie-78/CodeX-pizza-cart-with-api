@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body x-data="pizzaCart">
+        <div>
+            Username: <input type="text" x-model="username">
+            <button x-on:click="login" x-show="!cartId">Login</button>
+            <button x-on:click="logout" x-show="username && cartId">Logout</button>
+        </div>
+        <table style="width:100%">
+            <tr>
+                <th>flavour</th>
+                <th>price</th>
+                <th>qty</th>
+                <th>total</th>
+            </tr>
+
+            <template x-for="cart in history">
+                <tr>
+                    <td x-text="cart.flavour"></td>
+                    <td x-text="cart.price"></td>
+                    <td x-text="cart.qty"></td>
+                    <td x-text="cart.total"></td>
+
+                    
+                </tr>
+            </template>
+        </table>
+
+
+        
+
+      <script src="p.js"></script>
+</body>
+</html>
