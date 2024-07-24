@@ -2,9 +2,13 @@ body {
     background-color: #F2F3AE;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+h1{
+    text-align: center;
+}
+/*cart*/
 .message {
-    font-size: 28px;
+    font-size: 18px;
+    text-shadow: 3px 2px #C04000;
 }
 
 .pizzas-zerotwo {
@@ -151,6 +155,11 @@ button.pay {
 button.pay:hover {
     background-color: #E97451;
 }
+/*feature*/
+
+h2{
+    text-align: center;
+}
 .featured-pizzas {
     display: flex;
     flex-direction: row;
@@ -165,7 +174,7 @@ button.pay:hover {
     padding: 10px;
     box-shadow: 0 10px 25px #cbad31; 
     text-align: center;
-    max-width: 250px; 
+    width: 250px;  /* Fixed width */
     background-color: #FFF5EE;
 }
 
@@ -178,15 +187,17 @@ button.pay:hover {
     margin: 10px 0;
     font-size: 1.2em;
 }
+
 .featured-pizza-card span {
     display: block;
     margin: 5px 0;
 }
 
 .featured-pizza-card .btn {
-  margin-top: 10px;
+    margin-top: 10px;
     padding: 5px 10px; 
 }
+/*history**/
 .order-history {
     margin-top: 20px;
 }
